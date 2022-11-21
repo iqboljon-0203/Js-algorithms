@@ -391,13 +391,112 @@ function humanReadable (seconds) {
 // console.log([1,2,3,4,5],(item)=>{
 //      return item>5;
 // });
-function multipleOfIndex(array) {
-    let arr=[];
-    array.map((item,index)=>{
-      if(item%index===0){
-        arr.push(item);
-      }
-    });
-    return arr;
-  }
-  console.log(multipleOfIndex([68, -1, 1, -7, 10, 10]));
+// function multipleOfIndex(array) {
+//     let arr=[];
+//     array.map((item,index)=>{
+//       if(item%index===0){
+//         arr.push(item);
+//       }
+//     });
+//     return arr;
+//   }
+//   console.log(multipleOfIndex([68, -1, 1, -7, 10, 10]));
+// function findEvenIndex(arr)
+// {
+//     let all=arr.reduce((a,b)=>a+b,0);
+//     if(all===0){
+//         return 0;
+//     }
+//     let result;
+//     arr.map((item,index)=>{
+//      let sum=0;
+//      for(let i=0;i<index;i++){
+//             sum+=arr[i];
+//      }
+//      let end=0;
+//      for(let j=index+1;j<arr.length;j++){
+//          end+=arr[j];
+//      }
+//      if(sum===end){
+//           result=index;
+//      }
+//    });
+//     return result ??-1;
+// }
+// console.log(findEvenIndex([0,0,0,0,0]));
+// function solution(number){
+//     let sum=0;
+//     let i=0;
+//     while(i<number){
+//       if(i%3===0||i%5===0){
+//         sum+=i;
+//       }
+//       i++;
+//     }
+//     return sum;
+//   }
+//   console.log(solution(10));
+// function validParentheses(s) {
+//     let a="()";
+//      let b="[]";
+//      let c="{}";
+//      let flag=true;
+//      while(flag){
+//          if(s.length==0) break;
+//          else if(s.includes(a)||s.includes(b)||s.includes(c)){
+//              s=s.replace(a,"");
+//              s=s.replace(b,"");
+//              s=s.replace(c,"");
+//          }
+//          else{
+//              flag=false;
+//          }
+//      }
+//       return flag
+//  }
+// function isPalindrome(x) {
+//     const string=x.toLowerCase();
+//     return string.split("").reverse().join("").toLowerCase()===string;
+//  }
+//  console.log(isPalindrome( 'Abba'));
+// function distinct(nums) {
+//     if(nums.length == 0) return 0;
+//       let i = 0;
+//       for (let j = 1; j < nums.length; j++) {
+//           if (nums[j] !== nums[i]) {
+//               i++;
+//           }
+//           else{
+//             nums.splice(i,1);
+//           }
+//       }
+//       return nums;
+//   }
+//   console.log(distinct([ 1, 2,2,3,6,5, 3, 4, 5, 5 ]));
+function getCount(str) {
+    let count=0;
+    for(let i=0;i<str.length;i++){
+        if(str.includes('a')){
+            count++;
+            str=str.replace('a',' ');
+        }
+        if(str.includes('e')){
+            count++;
+            str=str.replace('e',' ');
+        }
+        if(str.includes('i')){
+            count++;
+            str=str.replace('i',' ');
+        }
+        if(str.includes('o')){
+            count++;
+            str=str.replace('o',' ');
+        }
+        if(str.includes('u')){
+            count++;
+            str=str.replace('u',' ');
+        }
+    }
+    return count;
+}
+console.log(getCount("abracadabra"));
