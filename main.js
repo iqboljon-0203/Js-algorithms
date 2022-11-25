@@ -358,29 +358,29 @@
 //         return 4;
 //     }
 //   };
-function humanReadable (seconds) {
-    let str='hh:mm:ss';
-    let hour=parseInt(seconds/3600);
-    let minute=parseInt((seconds-(hour*3600))/60);
-    let second=parseInt((seconds-(hour*3600))-(minute*60));
-    if(hour<10){
-        str=str.replace('hh',`0${hour}`);
-    }else{
-        str=str.replace('hh',`${hour}`);
-    }
-    if(minute<10){
-        str=str.replace('mm',`0${minute}`);
-    }else{
-        str=str.replace('mm',`${minute}`);
-    }
-    if(second<10){
-        str=str.replace('ss',`0${second}`);
-    }else{
-        str=str.replace('ss',`${second}`);
-    }
+// function humanReadable (seconds) {
+//     let str='hh:mm:ss';
+//     let hour=parseInt(seconds/3600);
+//     let minute=parseInt((seconds-(hour*3600))/60);
+//     let second=parseInt((seconds-(hour*3600))-(minute*60));
+//     if(hour<10){
+//         str=str.replace('hh',`0${hour}`);
+//     }else{
+//         str=str.replace('hh',`${hour}`);
+//     }
+//     if(minute<10){
+//         str=str.replace('mm',`0${minute}`);
+//     }else{
+//         str=str.replace('mm',`${minute}`);
+//     }
+//     if(second<10){
+//         str=str.replace('ss',`0${second}`);
+//     }else{
+//         str=str.replace('ss',`${second}`);
+//     }
     
-    return str;
-  }
+//     return str;
+//   }
 //   console.log(humanReadable(60));
 /////
 // function none(arr, fun){
@@ -473,30 +473,189 @@ function humanReadable (seconds) {
 //       return nums;
 //   }
 //   console.log(distinct([ 1, 2,2,3,6,5, 3, 4, 5, 5 ]));
-function getCount(str) {
-    let count=0;
-    for(let i=0;i<str.length;i++){
-        if(str.includes('a')){
-            count++;
-            str=str.replace('a',' ');
-        }
-        if(str.includes('e')){
-            count++;
-            str=str.replace('e',' ');
-        }
-        if(str.includes('i')){
-            count++;
-            str=str.replace('i',' ');
-        }
-        if(str.includes('o')){
-            count++;
-            str=str.replace('o',' ');
-        }
-        if(str.includes('u')){
-            count++;
-            str=str.replace('u',' ');
-        }
-    }
-    return count;
-}
-console.log(getCount("abracadabra"));
+// function getCount(str) {
+//     let count=0;
+//     for(let i=0;i<str.length;i++){
+//         if(str.includes('a')){
+//             count++;
+//             str=str.replace('a',' ');
+//         }
+//         if(str.includes('e')){
+//             count++;
+//             str=str.replace('e',' ');
+//         }
+//         if(str.includes('i')){
+//             count++;
+//             str=str.replace('i',' ');
+//         }
+//         if(str.includes('o')){
+//             count++;
+//             str=str.replace('o',' ');
+//         }
+//         if(str.includes('u')){
+//             count++;
+//             str=str.replace('u',' ');
+//         }
+//     }
+//     return count;
+// }
+// console.log(getCount("abracadabra"));
+// function solution(words) {
+//     for(let i=0;i<words.length;i++){
+//         for(let j=1;j<words.length;j++){
+//             console.log(words[j][words[j].length-1]);
+//             if(words[i][0]===words[j][words[j].length-1]||words[i][words[i].length-1]===words[j][0]){
+//                 return true;
+//             }
+//             else {
+//                 return false;
+//             }
+//         }
+//     }
+// }
+
+// console.log(solution(["east", "e", "e", "t", "t", "e", "time"]));
+// let arr=[1,2,3,4,6,65,66];
+// arr=arr.filter((item)=>item>6)
+// console.log(arr);
+// function fibonacci(arr,num){
+//     let start=0;
+//     let sum=[...arr];
+//     for(let i=0;i<arr.length;i++){
+//         sum+=arr[i];
+//         arr.push(sum)
+//     }
+//     i=i+1;
+//     console.log(arr);
+// }
+// console.log(fibonacci([1,1,1],10));
+
+// let parenthes = function(s) {
+//     let a="()";
+//     let b="[]";
+//     let c="{}";
+//     let flag=true;
+//     while(flag){
+//         if(s.length==0) break;
+//         else if(s.includes(a)||s.includes(b)||s.includes(c)){
+//             s=s.replace(a,"");
+//             s=s.replace(b,"");
+//             s=s.replace(c,"");
+//         }
+//         else{
+//             flag=false;
+//         }
+//     }
+//      return flag
+// };
+// console.log(parenthes('({)}[]'));
+// function swap (string) {
+//     let arr=['a','i','u','o','e'];
+//     for(let i=0;i<arr.length;i++){
+//         let big=arr[i].toUpperCase();
+//         string=string.replaceAll(arr[i],big);
+//     }
+//     return string;
+//   }
+//   console.log(swap("HelloWorld"))
+// function findOdd(arr) {
+//     for(let i=0;i<arr.length;i++){
+//         let count=0
+//         for(let j=0;j<arr.length;j++){
+//             if(arr[i]===arr[j]){
+//                 count++;
+//             }
+//         }
+//         if(count%2===1){
+//             return arr[i];
+//         }
+//     }
+  
+//   }
+//   console.log(findOdd([1,2,2,3,3,3,4,3,3,3,2,2,1]));
+// function sameCase(a){
+//     let sum=0;
+//     a.map(item=>{
+//         for(let key in item){
+//             if((typeof item[key])==='number'){
+//                 sum+=item[key];
+//             }
+//             if((typeof item[key])==='object'){
+//                 item[key].map(item=>{
+//                     sum+=item.childAge
+//                 })
+//             }
+//         }
+//     })
+//     return sum;
+// }
+// console.log(sameCase([{bill:12,child:[{childAge:10}] },{sam:34,child:[{childAge:13}]}]));
+//// Odd and even numbers without "%""
+// function oddOrEven(x) {
+//   return ( x & 1 ) ? "odd" : "even";
+// }
+// function sameCase(a){
+//         let sum=0;
+//         a.map(item=>{
+//             let arr=Object.values(item)
+//             console.log(arr);
+//         })
+//         return sum;
+//     }
+// console.log(sameCase([{bill:12,child:[{childAge:10}] },{sam:34,child:[{childAge:13}]}]));
+// function task(n){
+//     let str=""
+//     if(n%2===1){
+//         for(let i=1;i<n;i+=2){
+//             str+=str.padStart(i,"*");
+//             str+="\n";
+//         }
+//         for(let j=n;j>=1;j=j-2){
+//             str+=str.padStart(j,"*");
+//             str+="\n";
+//         }
+//     }
+//     else{
+//         return false;
+//     }
+//     return str;
+// }
+// console.log(task(5))
+// https://www.codewars.com/kata/5c8bfa44b9d1192e1ebd3d15/train/javascript
+// function warnTheSheep(queue) {
+//     if(queue.length===1||queue[queue.length-1] === "wolf"){
+//         return "Pls go away and stop eating my sheep";
+//     }
+//   for (let i = 0; i < queue.length; i++) {
+//     if (queue[i] === "wolf") {
+//       let n = queue.length - 1 - i;
+//        return `Oi! Sheep number ${n}! You are about to be eaten by a wolf!`
+//     }
+//   }
+// }
+// console.log(warnTheSheep(['sheep', 'sheep', 'wolf']));
+////https://www.codewars.com/kata/5b853229cfde412a470000d0/train/javascript
+// function twiceAsOld(dadYearsOld, sonYearsOld) {
+//     return (dadYearsOld-2*sonYearsOld)>0?(dadYearsOld-2*sonYearsOld):(-1)*(dadYearsOld-2*sonYearsOld)
+// }
+///https://www.codewars.com/kata/541c8630095125aba6000c00/train/javascript
+// function digitalRoot(n) {
+//     let sum=eval(n.toString().split('').join('+'));
+//     let alo=sum.toString().length;
+//     if(alo>1){
+//         digitalRoot(sum)
+//     }
+//     else{
+//         return sum;
+//     }
+// }
+// console.log(digitalRoot(942));
+// function digitalRoot(n) {
+//         let sum=eval(n.toString().split('').join('+'));
+//         while(sum.toString().length>1){
+//             res=eval(sum.toString().split('').join('+'));
+//             sum=res;
+//         }
+//     return sum;
+// };
+// console.log(digitalRoot(456));
