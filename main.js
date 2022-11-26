@@ -659,3 +659,13 @@
 //     return sum;
 // };
 // console.log(digitalRoot(456));
+// https://www.codewars.com/kata/59b81886460387d8fc000043/train/javascript
+// let reverse=a=>a.slice(0).map(a.pop,a)
+// console.log(reverse([1,2,4,5]));
+// function encode(n) {
+    
+// }
+
+// function decode(n) {
+  
+// }
