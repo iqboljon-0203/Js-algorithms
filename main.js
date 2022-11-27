@@ -669,3 +669,59 @@
 // function decode(n) {
   
 // }
+// function fibonacci(max) {
+//     let arr=[0,1];
+//     let sum=0;
+//     while(sum<max){
+//         sum=arr[arr.length-1]+arr[arr.length-2];
+//         if(sum<max){
+//             arr.push(sum)
+//         }
+//     }
+//     let all=0;
+//     for(let i=0;i<arr.length;i++){
+//         if(arr[i]%2===0){
+//             all+=arr[i]
+//         }
+//     }
+//     return all;
+// }
+// console.log(fibonacci(33));
+// var solution = function(firstArray, secondArray) {
+//     let sum=0;
+//     for(let i=0;i<firstArray.length;i++){
+//         sum+=(firstArray[i]-secondArray[i])**2;
+//     }
+//     let result=parseFloat(sum/firstArray.length);
+//     return result;
+// }
+// console.log(solution([10,20,10,2],[10,25,5,-2]));
+// function multiply(n, o){
+//     // let num=BigInt(n);
+//     // let num2=BigInt(o);
+//     let result=(n*o)
+//     if(result===parseFloat(result)){
+//         return `${BigInt(n*o)}`;
+//     }
+//     else{
+//         return `${parseFloat(n*o)}`;
+//     }
+// }
+// console.log(multiply("2.01", "3.0000"));
+// function solution(words) {
+//     //  for(let i=0;i<words.length;i++){
+//          for(let j=1;j<words.length;j++){
+//              if(words[0]===words[j][words[j].length-1]){
+//                  words[0]+=words[j];
+//              }
+//          }
+//     //  }
+//      console.log(words);
+//      if(words.length===0){
+//         return true;
+//       }
+//       else{
+//         return false; 
+//       }
+//  }
+//  console.log(solution(["east", "e", "e", "t", "t", "e", "time"]));
