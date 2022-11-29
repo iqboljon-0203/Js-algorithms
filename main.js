@@ -725,3 +725,239 @@
 //       }
 //  }
 //  console.log(solution(["east", "e", "e", "t", "t", "e", "time"]));
+// function drawStairs(n) {
+//     let arr=['I\n'];
+//     for(let i=1;i<n;i++){
+//         str='I\n '
+//         arr.push(str)
+//     }
+//     return arr.join(' ');
+//   }
+//   console.log(drawStairs(10));
+// function highAndLow(numbers){
+//     let arr=numbers.split(' ');
+//     let max=Math.max(...arr);
+//     let min=Math.min(...arr);
+//     return `${max} ${min}`
+// }
+// console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+///Circle cipher
+// function encode(s) {
+//     let str='';
+//     if(s.length%2===0){
+//         for(let i=1;i<=s.length/2;i++){
+//             str+=s[i-1];
+//             str+=s[s.length-i]
+//         }
+//     }
+//     if(s.length%2===1){
+//         for(let i=1;i<=Math.ceil(s.length/2);i++){
+//                 str+=s[i-1];
+//                 if(str.length===s.length) break;
+//                 str+=s[s.length-i]
+//         }
+//     }
+//     return str;
+//   }
+  
+//   function decode(s) {
+//     let text='';
+//     if(s.length%2===0){
+//         for(let i=0;i<s.length;i=i+2){
+//             text+=s[i];
+//         }
+//         for(let i=s.length-1;i>0;i=i-2){
+//             text+=s[i];
+//         }
+//     }
+//     if(s.length%2===1){
+//         for(let i=0;i<s.length;i+=2){
+//                 text+=s[i];
+//         }
+//         for(let i=s.length-2;i>0;i=i-2){
+//                 if(text.length===s.length) break;
+//                 text+=s[i]
+//         }
+//     }
+//     return text;
+//   }
+//   console.log(decode("wehti"));
+/////Count Photos
+// function countPhotos(road){
+//     console.log(road.split('.'));  
+// }
+// console.log(countPhotos(".><.>>.<<"));
+// function sumOfDifferences(arr) {
+//     let sum=0;
+//     arr=arr.sort((a,b)=>b-a)
+//     for(let i=0;i<arr.length-1;i++){
+//         sum+=(arr[i]-arr[i+1])
+//     }
+//     return sum;
+//   }
+// console.log(sumOfDifferences([-3, -2, -1]));
+// function matrix(n) {
+//     let result = new Array(n).fill().map(() => new Array(n).fill(''));
+//     // let result = [];
+//     // for (let i = 0; i < n; i++) {
+//     //     result.push([])
+//     // }
+
+//     let counter = 1;
+//     let startCol = 0;
+//     let endCol = n - 1;
+//     let startRow = 0;
+//     let endRow = n - 1;
+//     while (startCol <= endCol && startRow <= endRow) {
+//         for (let i = startCol; i <= endCol; i++) {
+//             result[startRow][i] = counter;
+//             counter++;
+//         }
+//         startRow++;
+//         for (let j = startRow; j <= endRow; j++) {
+//             result[j][endCol] = counter;
+//             counter++;
+//         }
+
+//         endCol--;
+
+//         for (let i = endCol; i >= startCol; i--) {
+//             result[endRow][i] = counter;
+//             counter++;
+//         }
+
+//         endRow--;
+//         for (let i = endRow; i >= startRow; i--) {
+//             result[i][startCol] = counter;
+//             counter++;
+//         }
+
+//         startCol++;
+
+//     }
+//     return result;
+
+// }
+// console.log(matrix(2))
+
+// function barTriang(p1, p2, p3){
+//     let arr=[];
+//     arr.push(((p1[0]+p2[0]+p3[0])/3).toFixed(4)-0)
+//     arr.push(((p1[1]+p2[1]+p3[1])/3).toFixed(4)-0)
+//     return arr;
+//   }
+//   console.log(barTriang([4, 6], [12, 4], [10, 10]));
+
+// function removeZeros(nums) {
+//         let originalLength = nums.length
+//         let final = []
+//         for(let i=0;i<nums.length; i++){
+//          if(nums[i]!==0) final = [...final, nums[i]]
+//         //  console.log(final);
+//         }
+//         let lenDiff = originalLength-final.length
+//         while(lenDiff){
+//          final = [...final,0]
+//          lenDiff--
+//         }
+//         return final
+//      }
+
+// console.log(removeZeros([1,null,"5","2",8,6,null,false,"0",0]));
+// https://www.codewars.com/kata/5c8bfa44b9d1192e1ebd3d15/train/javascript
+// function warnTheSheep(queue) {
+//     if(queue.length===1||queue[queue.length-1] === "wolf"){
+//         return "Pls go away and stop eating my sheep";
+//     }
+//   for (let i = 0; i < queue.length; i++) {
+//     if (queue[i] === "wolf") {
+//       let n = queue.length - 1 - i;
+//        return `Oi! Sheep number ${n}! You are about to be eaten by a wolf!`
+//     }
+//   }
+// }
+// console.log(warnTheSheep(['sheep', 'sheep', 'wolf']));
+////https://www.codewars.com/kata/5b853229cfde412a470000d0/train/javascript
+// function twiceAsOld(dadYearsOld, sonYearsOld) {
+//     return (dadYearsOld-2*sonYearsOld)>0?(dadYearsOld-2*sonYearsOld):(-1)*(dadYearsOld-2*sonYearsOld)
+// }
+///https://www.codewars.com/kata/541c8630095125aba6000c00/train/javascript
+// function digitalRoot(n) {
+//     let sum=eval(n.toString().split('').join('+'));
+//     let alo=sum.toString().length;
+//     if(alo>1){
+//         digitalRoot(sum)
+//     }
+//     else{
+//         return sum;
+//     }
+// }
+// console.log(digitalRoot(942));
+// #1
+// class Clothes {
+//     constructor(name,price,description,type){
+//         this.name = name;
+//         this.price = price;
+//         this.description = description;
+//         this.type=type;
+//     }
+//     get Type(){
+//         return this.getType()
+//     }
+//     getType(){
+//         return this.type
+//     }
+// }
+// let nike = new Clothes("Nike", 100, "new-shoes","for men");
+// let lalaku = new Clothes("Lalaku", 5, "Pampers","for children");
+// let scarf = new Clothes("Scarf", 10, "Scarf","for women");
+
+
+// console.log(lalaku.type);
+// #2
+// let arr=[];
+// class Clothes {
+//     constructor(name,price,description,type){
+//         this.name = name;
+//         this.price = price;
+//         this.description = description;
+//         this.type=type;
+//     }
+//     get Type(){
+//         return this.getType()
+//     }
+//     getType(){
+//         return this.type
+//     }
+// }
+// let nike = new Clothes("Nike", 100, "new-shoes","for men");
+// arr.push(nike);
+// let lalaku = new Clothes("Lalaku", 5, "new-pampers","for children");
+// arr.push(lalaku)
+// let scarf = new Clothes("Scarf", 10, "new-scarf","for women");
+// arr.push(scarf);
+// let shirt=new Clothes("Shirt",50,"new-shirt","for men");
+// arr.push(shirt)
+// console.log(arr);
+// // console.log(arr);
+// ////Shart 1
+// let name=arr.filter(item=>item.name.includes("la"))
+// console.log(name);
+// /////Shart 2
+// let price=arr.filter(item=>item.price>10)
+// console.log(price);
+// // ////Shart3
+// let between=arr.filter(item=>(item.price>5&&item.price<=50))
+// console.log(between);
+// // /////Shart 4
+// let bigToLittle=arr.sort((a,b)=>b.price-a.price)
+// console.log(bigToLittle);
+// // /////Shart 5
+// let changeName=arr.map(item=>{
+//     if(item.name.length<6){
+//         item.name="AnotherName";
+//         console.log(item);
+//     }
+// })
+// console.log(changeName);
+
