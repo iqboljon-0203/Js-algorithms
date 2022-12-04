@@ -960,4 +960,28 @@
 //     }
 // })
 // console.log(changeName);
-
+// function numberJoy(n) {
+//     let str=n.toString();
+//     let arr=str.split("");
+//     let sum=arr.reduce((a,b)=>Number(a)+Number(b));
+//     let revSum=sum.toString().split("").reverse().join("");
+//     if(sum*Number(revSum)===n){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+// console.log(numberJoy(18));
+// function removeSmallest(numbers) {
+//     let res;
+//   let first;
+//   numbers.forEach(item=>{
+//     first=item
+//     first=Math.min(first,item)
+//   })
+//   console.log(res);
+// //   let index=numbers.indexOf(min);
+// //   numbers.splice(index,1);
+// //   return numbers
+//   }
+//   console.log(removeSmallest([2,3,4,5,6,2,1,21,1,14,5,6]));
