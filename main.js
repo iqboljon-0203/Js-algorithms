@@ -985,3 +985,84 @@
 // //   return numbers
 //   }
 //   console.log(removeSmallest([2,3,4,5,6,2,1,21,1,14,5,6]));
+// let res;
+// while(user){
+//     user=user.filter(item=>item.age>18);
+//     user.map((item)=>{
+//         res=item.children;
+//     })
+//     user=res;
+// }
+// console.log(user);
+// function derDieDas(wort){
+//   let regex=wort.match(/[a e i o u ä ö ü]/gi);
+//   if(regex===null){
+//     return `das ${wort}`
+//   }
+//   else if(regex.length<2){
+//     return `das ${wort}`
+//   }else if(regex.length>=2&&regex.length<=3){
+//     return `die ${wort}`
+//   }else{
+//     return `der ${wort}`
+//   }
+// }
+// console.log(derDieDas("slm"))
+// function digitize(n){
+//   let res=n.toString().split('').reverse();
+//       console.log(res)
+//   return res
+// }
+// function solve(str){
+//   let res=str.split(' ');
+//   if(res.length>1){
+//     res=res.map(item=>item.split('').join(""))
+//     return res.join(" ");
+//   }else{
+//     return str.split('').reverse().join("");
+//   }
+// }
+// console.log(solve("skco redo cruoy"));
+// function reverseMessage(str) {
+//   let res=str.split("").reverse().join('').toLowerCase();
+//   res=res.split('');
+//   for(let i=0;i<res.length;i++){
+//     res[0]=res[0].toUpperCase();
+//     if(res[i]===" "){
+//       res[i+1]=res[i+1].toUpperCase();
+//     }
+//   }
+//   return res.join('')
+// }
+// console.log(reverseMessage('This is an example of a Reversed Message!'));
+// function toCamelCase(str){
+//   let res=str.split("");
+//   if(res.length===0){
+//     return ''
+//   }
+//   for(let i=0;i<res.length;i++){
+//     if(res[i]==='_'){
+//       res[i+1]=res[i+1].toUpperCase();
+//       res.splice(i,1);
+//     }
+//   }
+// return res.join('')
+// }
+// console.log(toCamelCase("the_stealth_warrior"));
+// function createPhoneNumber(numbers){
+//   let str='(xxx) xxx-xxxx';
+//   numbers.map((item)=>{
+//     str=str.replace("x",`${item}`)
+//   })
+//   return str
+// }
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+// function alphabetized(s) {
+//   let arr=s.split("");
+//   console.log(arr);
+//   // console.log(arr.sort((a,b)=>a.localCompare(b)));
+// }
+// console.log(alphabetized("The Holy Bible"));
+
+
