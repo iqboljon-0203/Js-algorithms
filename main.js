@@ -1065,4 +1065,18 @@
 // }
 // console.log(alphabetized("The Holy Bible"));
 
-
+// https://www.codewars.com/kata/55c45be3b2079eccff00010f/solutions/javascript
+// function order(words){
+//     let arr=words.split(' ');
+//     let mas=[];
+//     for(let j=1;j<=arr.length;j++){
+//         for(let k=0;k<arr.length;k++){
+//             if(arr[k].includes(j)){
+//                 mas.push(arr[k])
+//             }
+//         }
+//     }
+    
+//     return mas.join(' ')
+// }
+// console.log(order("is2 Thi1s T4est 3a"));
