@@ -1080,3 +1080,24 @@
 //     return mas.join(' ')
 // }
 // console.log(order("is2 Thi1s T4est 3a"));
+////string charlarini taqqoslash
+// function checkStr(str1,str2){
+//   if(str1.length===str2.length){
+//     return (str1.toLowerCase().split('').sort().join('')===str2.toLowerCase().split('').sort().join(''))
+//   }else{
+//     return false
+//   }
+// }
+// console.log(checkStr("veyobatsu","ustaboyev"))
+//string harflarini sanash
+// let str='Assalomu alaykum'; 
+// let obj={};
+// function countCharsString(string){
+//     string=string.replace(" ",'').toLowerCase();
+//     for(let char of string){
+//         if(char in obj) ++obj[char]
+//         else obj[char]=1
+//     }
+//     return obj;
+// }
+// console.log(countCharsString(str));
