@@ -1101,3 +1101,66 @@
 //     return obj;
 // }
 // console.log(countCharsString(str));
+
+// function removeSmallest(numbers) {
+//     let first=numbers[0];
+//     numbers.map(item=>{
+//       if(item<=first){
+//         first=item;
+//       }
+//     })
+//     let min=numbers.indexOf(first);
+//     numbers.splice(min,1);
+//   return numbers
+// }
+// function lastSurvivor(letters, coords) {
+//     let arr=letters.split('');
+//     coords.map((item)=>{
+//       arr.splice(item,1);
+//     })
+//     return arr.join('')
+//   }
+
+// function validParentheses(s) {
+//    let a="()";
+//     let b="[]";
+//     let c="{}";
+//     let flag=true;
+//     while(flag){
+//         if(s.length==0) break;
+//         else if(s.includes(a)||s.includes(b)||s.includes(c)){
+//             s=s.replace(a,"");
+//             s=s.replace(b,"");
+//             s=s.replace(c,"");
+//         }
+//         else{
+//             flag=false;
+//         }
+//     }
+//      return flag
+// }
+
+
+// function removeSmallest(numbers) {
+//   let res=numbers.slice();
+//     let first=res[0];
+//     res.map(item=>{
+//       if(item<=first){
+//         first=item;
+//       }
+//     })
+//     let min=res.indexOf(first);
+//     res.splice(min,1);
+//   return res
+// }
+
+
+// function findUniq(arr) {
+//   let res;
+//     arr.map((item,index,array)=>{
+//       if(array.indexOf(item)===array.lastIndexOf(item)){
+//         res=item
+//       }
+//     })
+//   return res
+// }
