@@ -1217,10 +1217,44 @@
 // }
 // console.log(test([0,4,3,-1],2));
 //// sum(1)(2)(3)(4)()
-function sum(a){
-    return (b)=>{
-       return b?sum(a+b):a
-    }
-}
-console.log(sum(1)(2)(3)(4)());
+    // function sum(a){
+    //     return (b)=>{
+    //        return b?sum(a+b):a
+    //     }
+    // }
+    // console.log(sum(1)(2)(3)(4)());
+//         function findShort(s){
+//             let arr=s.split(" ");
+//             let mas=[];
+//             arr.map((item,index)=>{
+//                 mas.push(item.length);
+//             })
+//             return Math.min(...mas)
+//         }
+// console.log(findShort("bitcoin take over the world maybe who knows perhaps"));      
+// function solution(words){
+//     let sum=0
+//     words.map(item=>{
+//         sum+=item.length;
+//     })
+//     let str=words[0];
+//     for(let i=1;i<words.length;i++){
+//         for(let j=1;j<words.length;j++){
+//             if(words[i]!==words[j]&&words[i][words.length-1]===words[j][0]){
+//                 words[i]+=words[j];
+//                 str+=words[i];
+//             }
+//         }
+//     }
+//     if(str.length===sum){
+//         return true
+//     }else {
+//         return false
+//     }
+// }
+// console.log(solution(["excavate", "endure", "desire", "screen", "theater", "excess", "night"]));
 
+// function maps(x){
+//     return x.map(item=>item*2)
+// }
+//   console.log(maps([1,1,2]));
