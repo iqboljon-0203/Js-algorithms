@@ -1216,3 +1216,11 @@
 //     }
 // }
 // console.log(test([0,4,3,-1],2));
+//// sum(1)(2)(3)(4)()
+function sum(a){
+    return (b)=>{
+       return b?sum(a+b):a
+    }
+}
+console.log(sum(1)(2)(3)(4)());
+
